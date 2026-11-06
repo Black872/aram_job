@@ -54,13 +54,6 @@ Offer, plus internal normalized status and synchronization metadata.
 Spreadsheet column mapping will be configured in Stage 2 after inspecting the actual
 sheet headers and tab layout. The current sheet will not be modified in Stage 1.
 
-## Security notes
-- `.env` is excluded from Git.
-- The database port is bound to `127.0.0.1` by default.
-- Do not commit OAuth tokens, API keys, service-account JSON, or production data.
-- Before exposing the API outside your LAN, add authentication and HTTPS/reverse proxy.
-- Gmail integration will request read-only access and only process messages carrying
-  the configured `Job Applications` label.
 
 ## Development commands
 ```bash
@@ -74,6 +67,4 @@ docker compose down
 ## Next stage
 Stage 2 will inspect the existing Google Sheet's exact headers, import rows into
 PostgreSQL, assign stable external row identifiers, and implement safe synchronization.
-# aram_job
-# aram_job
-# aram_job
+
